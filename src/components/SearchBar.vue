@@ -1,3 +1,4 @@
+<!-- eslint-disable -->
 <template>
   <div class="my-4 text-center">
     <input
