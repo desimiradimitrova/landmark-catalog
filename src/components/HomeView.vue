@@ -28,17 +28,20 @@
       </select>
     </div>
 
-    <!-- Landmark Grid or Empty Message -->
     <div v-if="filteredAndSortedLandmarks.length" class="grid">
-      <div v-for="landmark in filteredAndSortedLandmarks" :key="landmark.id" class="card">
-        <img :src="landmark.image" :alt="landmark.name" />
-        <h2>{{ landmark.name }} - {{ landmark.country }}</h2>
-        <p>{{ landmark.description }}</p>
-        <button @click="toggleFavorite(landmark.id)">
-          {{ landmark.isFavorite ? "Remove from Favorites" : "Add to Favorites" }}
-        </button>
-      </div>
-    </div>
+  <div v-for="landmark in filteredAndSortedLandmarks" :key="landmark.id" class="card">
+    <router-link :to="`/landmark/${landmark.id}`" class="landmark-link">
+
+      <img :src="landmark.image" :alt="landmark.name" />
+      <h2>{{ landmark.name }}</h2>
+    </router-link>
+    <p>{{ landmark.description }}</p>
+    <button @click="toggleFavorite(landmark.id)">
+      {{ landmark.isFavorite ? "Remove from Favorites" : "Add to Favorites" }}
+    </button>
+  </div>
+</div>
+
 
     <!-- Message When No Landmarks -->
     <div v-else class="no-landmarks">
@@ -222,12 +225,12 @@ const addLandmark = () => {
   width: 50%;
   padding: 0.5rem;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid #c2bfbf;
   border-radius: 4px;
 }
 
 .add-landmark-form button {
-  background-color: #2563eb;
+  background-color: #729bf1;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -238,4 +241,14 @@ const addLandmark = () => {
 .add-landmark-form button:hover {
   background-color:  #1a3e34;;
 }
+
+.landmark-link {
+  text-decoration: none;
+  color: inherit; /* Use current text color */
+}
+
+.landmark-link:hover {
+  color: #007991; /* Optional: Change color on hover */
+}
+
 </style>
