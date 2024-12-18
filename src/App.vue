@@ -2,6 +2,7 @@
   <div>
     <NavigationBar />
     <router-view />
+    <FooterView />
   </div>
 </template>
 
@@ -35,4 +36,5 @@ const toggleFavorite = (id) => {
 // Provide State to All Child Components
 provide("landmarks", landmarks);
 provide("toggleFavorite", toggleFavorite);
+import FooterView from "@/components/FooterView.vue";
 </script>
