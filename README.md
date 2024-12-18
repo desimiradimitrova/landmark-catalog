@@ -39,14 +39,14 @@ This project was developed as part of the **University Web Design Subject** and 
 ### **Home Page**
 Explore iconic landmarks, search, and filter by country.
 
-![Home Page](./screenshots/screenshothome.png)
+![Home Page](./public/screenshots/screenshothome.jpg)
 
 ---
 
 ### **Landmark Details**
 View detailed information about a selected landmark.
 
-![Landmark Details](./screenshots/screenshotdetails.png)
+![Landmark Details](./public/screenshots/screenshotdetails.jpg)
 
 ---
 
