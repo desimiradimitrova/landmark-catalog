@@ -1,7 +1,7 @@
 /* Global Reset */
 :root {
-  --primary-bg-color: #1ca3ec; /* Water Blue-Green */
-  --secondary-bg-color: #44b36b; /* Lush Green */
+  --primary-bg-color: #068f7a; /* Water Blue-Green */
+  --secondary-bg-color: #4bd8da; /* Lush Green */
   --button-color: #9b5c34; /* Warm Brown */
   --button-hover-color: #8edbf2; /* Sky Blue */
   --card-bg-color: #f4f9f9; /* Soft white/neutral */
@@ -22,7 +22,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(28, 163, 236, 0.6); /* Blue-Green Transparent */
+  background: rgba(3, 178, 187, 0.6); /* Blue-Green Transparent */
   backdrop-filter: blur(3px);
 }
 hero-text h1 {
@@ -86,24 +86,34 @@ nav a:hover {
 /* Landmarks Grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   padding: 1rem;
+}
+.landmark-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 landmarks per row */
+  gap: 2rem; /* Increase spacing between cards */
+  margin: 2rem auto; /* Center grid with margin */
+  max-width: 1200px; /* Control the max width of the grid */
 }
 
 /* Cards */
 .card {
+  text-align: center;
   background-color: var(--card-bg-color);
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 1rem;
-  transition: transform 0.3s;
-}
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;}
 
 .card img {
   width: 100%;
-  border-radius: 4px;
+  height: 250px; /* Larger image height for bigger landmarks */
+  object-fit: cover; /* Ensure images maintain aspect ratio */
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .card h2 {
