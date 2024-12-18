@@ -161,11 +161,12 @@ input[type="text"]:focus {
 .search-bar {
   background-color: #f4f4f4;
   border: 1px solid var(--secondary-bg-color);
-  padding: 0.5rem;
-  border-radius: 4px;
+  padding: 0.75rem;
+  border-radius: 8px;
   font-size: 1rem;
   color: var(--text-color);
   margin-right: 1rem;
+  flex: 1;
 }
 
 .search-bar:focus {
@@ -176,8 +177,44 @@ input[type="text"]:focus {
 .sort-dropdown {
   background-color: var(--card-bg-color);
   border: 1px solid var(--button-color);
-  padding: 0.5rem;
-  border-radius: 4px;
+  padding: 0.75rem;
+  border-radius: 8px;
   color: var(--text-color);
+  font-size: 1rem;
+  width: 150px;
+}
+
+/* Grid Layout for Landmarks */
+.landmark-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 landmarks per row by default */
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.landmark-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.search-bar,
+.sort-filter {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   font-size: 1rem;
 }
